@@ -1,586 +1,214 @@
-@font-face {
-    font-family: 'VertigoFLF';
-    src: url('fonts/VertigoFLF.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Gruppo';
-    src: url('fonts/Gruppo-Regular.ttf') format('truetype');
-}
-
+html,
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+  position: relative;
+  overflow-x: hidden;
 }
 
-h1 {
-    color: #e2231a;
-    font-family: 'VertigoFLF', Arial, sans-serif;
-    font-size: 30pt;
-}
+/* ---- grid ---- */
 
-h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-    color: #e2231a;
-    font-family: 'Gruppo', Arial, sans-serif;
-}
-
-h3 {
-    color: #e2231a;
-    font-family: 'VertigoFLF', Arial, sans-serif;
-    font-size: 20pt;
-}
-
-.headline-line-pitch {
-    margin-bottom: 75px;
-}
-
-/* ---- footer ---- */
-footer {
-    background-color: #e2231a;
-    padding: 10px 80px;
-    font-family: 'VertigoFLF', Arial, sans-serif;
-    font-size: 15pt;
-    display: block;
-    color: white;
-    text-align: right;
-}
-
-/* ---- nav ---- */
-nav {
-    z-index: 2;
-    box-shadow: 3px 3px 8px #E0E0E0;
-    overflow: hidden;
-    background-color: #e2231a;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    float: left;
-    font-family: 'VertigoFLF', Arial, sans-serif;
-    font-size: 20pt;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 30px 80px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #9d1812;
-    color: #e5e5e5;
-}
-
-#topnav {
-    width: 100%;
-}
-
-.nav-logo {
-    background-image: url('img/Logo_white.png');
-    background-size: contain;
-    float: right;
-    width: 54px;
-    /*height: 54px;*/
-    background-repeat: no-repeat;
-    margin: 20px;
-    height: 54px;
-}
-
-.navigation .icon {
-    display: none;
-    padding: 30px;
-    margin: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #e2231a;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    font-family: 'VertigoFLF', Arial, sans-serif;
-    font-size: 20pt;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 30px 80px;
-    text-decoration: none;
-}
-
-/* ---- menu link --- */
-a {
-    text-decoration: none;
-    color: white;
-}
-
-#back-top a:hover {
-    color: #000;
-}
-
-/* arrow icon (span tag) */
-#back-top span {
-    width: 108px;
-    height: 108px;
-    display: block;
-    margin-bottom: 7px;
-    background: #ddd url(up-arrow.png) no-repeat center center;
-    /* rounded corners */
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    /* background color transition */
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
-}
-
-/* ---- sticky nav ---- */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    color: lightgray;
-    background-color: #9e1812;
-}
-
-/* ---- starter page center logo ---- */
-.logo-homepage-container {
-    height: 100vh;
-    width: auto;
-    text-align: center;
-}
-
-.logo-homepage-container img {
-    height: 400px;
-    z-index: -1;
-    /* center the picture horizontally and vertically */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* ---- section general grid wrapper ---- */
 .wrapper {
-    min-height: 100vh;
-    display: grid;
-    text-align: center;
-    grid-template-columns: 15% 70% 15%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow-x: hidden;
+  position: relative;
 }
 
-.headline-start {
-    margin-top: 120px !important;
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
 }
 
-.box-start {
-    margin-top: 16% !important;
+/* ---- sections --- */
+.page {
+  background-color: #f1f1f1;
 }
 
-/* ---- ueber uns ---- */
-.ueber-uns-container {
-    height: 480px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    background-color: #fde9e8;
-    box-shadow: 3px 3px 8px #E0E0E0;
+/* --- slider ---- */
+
+.testcontent {
+  color: white;
+  list-style: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: orange;
 }
 
-.ueber-uns-headline {
-    color: #e2231a;
-
-}
-
-.ueber-uns-text {
-    font-family: 'VertigoFLF', Arial, sans-serif;;
-    padding: 30px;
-    font-size: 20pt;
-    color: #3c3c3b;
-}
-
-.ueber-uns-pic {
-    background-image: url('img/csm_ramien_dc_6_4642c9df96.jpg');
-}
-
-.ueber-uns-section {
-    height: 100vw;
-}
-
-/* ---- menu ---- */
-.menu-groups {
-    background-color: #fde9e8;
-    padding: 20px 0 20px;
-    /*box-shadow: 3px 3px 8px #E0E0E0;*/
-    margin: 20px auto 22px;
-    min-width: 263px;
-    max-width: 650px;
-    text-align: center;
-    font-size: 10pt;
-}
-
-.menu-line-pitch {
-    margin-bottom: 10px;
-}
-
-.menu-subgroups {
-    font-family: 'Gruppo', Arial, sans-serif;
-    font-size: 12pt;
-    color: #3c3c3b;
-}
-
-.menu-download {
-    margin: 15px;
-    padding: 15px 50px;
-    font-size: 20pt;
-    font-family: 'Gruppo', Arial, sans-serif;
-    border: 0;
-    background-color: #e2231a;
-    color: white;
-}
-
-.menu-download:hover, .input-submit:hover {
-    box-shadow: 3px 3px 8px #E0E0E0;
-    background-color: lightcoral;
-    transform: scale(1.02);
-}
-
-/* ---- reservation general wrapper ---- */
-.res-headline {
-    margin: 20px 20px 0 20px;
-}
-
-.res-gen-wrapper {
-    display: grid;
-    grid-template-columns: 35% 40% 25%;
-}
-
-.res-form {
-    background-color: #fde9e8;
-    text-align: left;
-    box-shadow: 3px 3px 8px #E0E0E0;
-}
-
-.input-form {
-    border: 0px solid;
-    margin: 20px auto 0px 20px;
-    padding: 10px;
-    font-size: 15pt;
-    font-family: 'VertigoFLF', Arial, sans-serif;
-    color: #3c3c3b;
-}
-
-.input-field-width {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-sizing: border-box; /* Opera/IE 8+ */
-    width: calc(100% - 40px);
-}
-
-.input-field-date-time {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-sizing: border-box; /* Opera/IE 8+ */
-    width: calc(50% - 32px);
-    color: #3c3c3b;
-}
-
-input:hover, textarea:hover {
-    box-shadow: 0 0 5px rgba(107, 0, 0, 0.2);
-}
-
-textarea {
-    resize: none;
-    box-sizing: border-box;
-    width: calc(100% - 40px);
-}
-
-.input-submit {
-    border: none;
-    margin: 20px;
-    padding: 15px;
-    font-size: 15pt;
-    font-family: 'Gruppo', Arial, sans-serif;
-    background-color: #e2231a;
-    color: white;
-    float: right;
-    box-sizing: border-box; /* Opera/IE 8+ */
-    width: calc(180px - 40px);
-}
-
-/* ---- map ---- */
-.anfahrtsplan {
-    background-image: url('assets/rg_dc_anfahrtsplan.jpg');
-    box-shadow: 3px 3px 8px #E0E0E0;
-    background-position-x: 67%;
-    background-repeat: no-repeat;
-    background-size: 131%;
-    background-position-y: 50%;
-    z-index: -1;
-}
-
-/* ---- kontakt ---- */
-.kontakt {
-    padding: 10px;
-    text-align: right;
-}
-
-.kontakt-logo {
-    background-image: url('img/Logo.png') center;
-    /* center the background-image */
-    width: 100%;
-    margin: 20px 20px 60px 30px;
-}
-
-.kontakt-text {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    color: #3c3c3b;
-}
-
-.kontakt-firma-text {
-    font-size: 20pt;
-    color: #e2231a;
-    font-weight: bold;
-}
-
-.oeffnungszeiten {
-    color: #3c3c3b;
-    line-height: 1.5em;
-}
-
-/* ---- slick slider ---- */
-#slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-}
-
-#slider ul li {
-    position: relative;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 500px;
-    height: 300px;
-    background: #ccc;
-    text-align: center;
-    line-height: 300px;
-}
-
-a.control_prev, a.control_next {
-    position: absolute;
-    top: 40%;
-    z-index: 999;
-    display: block;
-    padding: 4% 3%;
-    width: auto;
-    height: auto;
-    background: #2a2a2a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-a.control_prev:hover, a.control_next:hover {
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-    border-radius: 0 2px 2px 0;
-}
-
-a.control_next {
-    right: 0;
-    border-radius: 2px 0 0 2px;
-}
-
-.slider_option {
-    position: relative;
-    margin: 10px auto;
-    width: 160px;
-    font-size: 18px;
-}
-
-.slick-prev::before, .slick-next::before {
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    color: #e2231a;;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button::before {
-    color: #e2231a;
-}
-
-.slick-dots {
-    background-color: white;
-    font-size: 10px;
-}
-
-.slick-dots li button::before {
-    color: lightcoral;
-    font-size: 10px;
-    top: 5px;
-}
-
-/* ---- responsive ---- */
-@media screen and (max-width: 1040px) {
-    .navigation a:not(:first-child) {
-        display: none;
+    .carouselbox {
+      font-family: helvetica,sans-serif;
+      font-size: 14px;
+      width: 100px;
+      position: relative;
+      margin: 1em;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px #ccc;
+      overflow: hidden;
     }
-
-    .navigation a.icon {
-        float: right;
-        display: block;
-        padding: 10px 20px;
+    .content {
+      margin: 0;
+      padding: 0;
     }
-
-    nav a {
-        padding: 10px 0 0 4%;
-        font-size: 25px;
+    .content li {
+      font-size: 100px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      list-style: none;
+      text-align: center;
+      z-index: 2;
     }
+    .active {
+      height: 130px;
+    }
+    .active li {
+      position: absolute;
+      top: 200px;
+    }
+    .active li.current {
+      top: 30px;
+    }
+    .buttons {
+      display: none;
+    }
+    .active .buttons {
+      display: block;
+      padding: 5px 0;
+      background: #eee;
+      text-align: center;
+      z-index: 10;
+      position: relative;
+    }
+    .carouselbox button {
+      border: none;
+      visibility: hidden;
+    }
+    .active button {
+      visibility: visible;
+    } 
+    .offscreen {
+      position: absolute;
+      left: -2000px;
+    }
+/* ---- header ---- */
+
+.header-block {
+  background-color: aliceblue;
+  height: 100vh;
 }
 
-@media screen and (max-width: 1040px) {
-    .navigation.responsive {
-        position: relative;
-    }
-
-    .navigation.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .navigation.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
+.home-logo {
+  width: 40em;
+  height: 40em;
+  background-color: blue;
+  margin: auto;
 }
 
-@media screen and (max-width: 600px) {
-    .logo-size {
-        height: 45% !important;
-    }
+/* ---- side-nav ---- */
+nav {
+  position: absolute;
 }
 
-@media screen and (max-width: 1295px) {
-    .nav-logo {
-        display: none;
-    }
-
-    .kontakt-logo  {
-        width: 15%;
-        position: absolute;
-        left: 0;
-    }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5em;
 }
 
-@media screen and (max-width: 1455px) {
-    .icon {
-        margin-top: -90px;
-    }
-
-
+.sidenav a {
+  padding: 0.1em 0.1em 0.1em 20px;
+  text-decoration: none;
+  font-size: 1.05em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  letter-spacing: 0.4em;
+  line-
 }
 
-@media screen and (max-width: 800px) {
-    .wrapper {
-        grid-template-columns: 5% 90% 5%;
-    }
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-@media screen and (max-width: 950px) {
-
-    .ueber-uns-container {
-        grid-template-columns: 100%;
-    }
-
-    .ueber-uns-text {
-        height: 0;
-        font-size: 22px;
-        line-height: 26px;
-        padding: 0 10%;
-    }
-
-    .ueber-uns-pic {
-        background-position-y: -206px;
-        height: 300px;
-        margin-top: 200px;
-    }
-
-    .slick-prev::before, .slick-next::before {
-        display: none;
-    }
-
-    .slick-dots li {
-        display: none;
-    }
-
-    .anfahrtsplan {
-        height: 250px;
-        margin-top: 20px;
-        background-size: 100%;
-    }
-
-    .res-gen-wrapper {
-        grid-template-columns: 100%;
-    }
-
-
-
-    .kontakt-text {
-        padding-top: 23px;
-        display: inline-block;
-    }
-
-    .kontakt {
-        margin-bottom: 40px;
-    }
-
-    .headline-start {
-        margin-top: 80px !important;
-    }
-
-    a[href="#reservierung"] {
-        padding-bottom: 15px;
-    }
-
-    #topnav {
-        position: fixed;
-    }
+.sidenav a.clicked {
+  margin-left: 500px;
+  -webkit-transition: 1s; // you don't need to specify this again
 }
 
-@media screen and (max-width: 757px) {
-    .menu-download {
-        margin: 15px 0;
-        width: 263px;
-    }
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0em;
+  font-size: 3.5em;
+  margin-left: 50px;
+}
+
+.sidenavclick {
+  font-size: 3em;
+  cursor: pointer;
+  color: grey;
+  padding: 20px;
+}
+
+.nav-closebtn {
+  font-size: 0.5em;
+}
+
+.whole-navigation {
+  /*padding-top: 20px;*/
+  height: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+/* ---- about-me ---- */
+
+.about-me-container {
+  height: 100vh;
+  background-color: green;
+}
+
+/* ---- left-right ---- */
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+}
+
+.wrapper {
+  height: 100%;
+  background: #263729;
+}
+
+.page {
+  float: left;
+  min-height: 100%;
+  padding-top: 300px;
+}
+
+a {
+  color: #FFF;
+}
+
+a.selected {
+  color: red;
+}
+
+.simulate {
+  height: 2000px;
 }
